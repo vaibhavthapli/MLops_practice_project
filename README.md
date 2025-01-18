@@ -12,4 +12,5 @@ STEPS:
 5. create template.py  (responsible for creating the entire project structure)
 6. code in template.py  # we have to things in our project [components & pipeline(training, testing)]
 7. run template.py  (python template.py)
-8. 
+8. we can also use cookeecuter(optional)
+9. 
