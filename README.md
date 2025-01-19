@@ -15,7 +15,7 @@ STEPS:
 8. we can also use cookiecutter(optional)
 9. Write code on logger.py
 10. Write code for exception.py
-11. create .env variable
+11. create .env variable (store database connection )
 12. write code in utils.py (for database connection)
 13. Start data ingestion(open components/data_ingestion.py)
 14. write code for run data ingestion in app.py
