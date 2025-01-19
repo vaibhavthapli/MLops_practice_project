@@ -12,5 +12,11 @@ STEPS:
 5. create template.py  (responsible for creating the entire project structure)
 6. code in template.py  # we have to things in our project [components & pipeline(training, testing)]
 7. run template.py  (python template.py)
-8. we can also use cookeecuter(optional)
-9. 
+8. we can also use cookiecutter(optional)
+9. Write code on logger.py
+10. Write code for exception.py
+11. create .env variable
+12. write code in utils.py (for database connection)
+13. Start data ingestion(open components/data_ingestion.py)
+14. write code for run data ingestion in app.py
+15. 
