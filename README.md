@@ -4,7 +4,7 @@ Also save it for future reference Complete AI software Deployment with CI/CD.
 Thank You!
 
 STEPS:
-1. create requirements.txt
+1. create requirements.txt (pip install -r requirements.txt)
 2. create setup.py
 3. before run setup.py '''create src package(by adding __init__.py) in a src folder for check'''
 4. run setup.py
@@ -22,4 +22,4 @@ STEPS:
 15. use DVC(data version control) for track data like git (for big data)
 16.  DVC Commands
 #### dvc init, dvc add artifacts/raw.csv,
-17. use jupyter for research for training
+17. use jupyter for research for training(USE EDA,)
