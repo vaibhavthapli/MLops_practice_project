@@ -20,4 +20,5 @@ STEPS:
 13. Start data ingestion(open components/data_ingestion.py)
 14. write code for run data ingestion in app.py
 15. use DVC(data version control) for track data like git (for big data)
-16. 
+16.  DVC Commands
+#### dvc init, 
