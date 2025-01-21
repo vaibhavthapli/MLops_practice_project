@@ -21,4 +21,5 @@ STEPS:
 14. write code for run data ingestion in app.py
 15. use DVC(data version control) for track data like git (for big data)
 16.  DVC Commands
-#### dvc init, dvc add artifacts/raw.csv , 
+#### dvc init, dvc add artifacts/raw.csv,
+17. use jupyter for research for training
