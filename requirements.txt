@@ -7,4 +7,5 @@ pymysql
 scikit-learn
 seaborn
 matplotlib
+catboost
 -e .

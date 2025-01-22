@@ -14,7 +14,6 @@ male,group E,some high school,standard,none,30,26,22
 female,group B,high school,free/reduced,completed,67,80,81
 female,group D,some college,free/reduced,none,49,65,61
 male,group D,some college,standard,completed,85,81,85
-female,group D,some high school,standard,completed,65,78,82
 male,group D,high school,standard,none,53,52,42
 male,group D,bachelor's degree,free/reduced,none,55,46,44
 female,group D,some high school,standard,none,48,58,54
@@ -94,7 +93,6 @@ female,group E,some college,standard,none,100,92,97
 male,group D,bachelor's degree,standard,none,69,58,57
 male,group B,high school,free/reduced,none,66,77,70
 female,group B,some college,standard,none,19,38,32
-male,group D,associate's degree,standard,none,75,68,64
 male,group D,some college,standard,none,60,63,59
 female,group A,some college,standard,none,58,70,67
 female,group C,associate's degree,standard,none,69,80,71
