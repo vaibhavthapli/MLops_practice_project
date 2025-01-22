@@ -36,7 +36,7 @@ class DataIngestion:
 
             train_set,test_set = train_test_split(df,test_size=0.2,random_state=42)
             # Creating validation set from test set (1% of the test set)
-            validation_size = int(len(test_set) * 0.01)
+            validation_size = int(len(test_set) * 0.1)
             validation_set = test_set.sample(n=validation_size, random_state=42)
             test_set = test_set.drop(validation_set.index)
 
