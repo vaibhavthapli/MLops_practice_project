@@ -8,4 +8,6 @@ scikit-learn
 seaborn
 matplotlib
 catboost
+lazypredict
+xgboost
 -e .
