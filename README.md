@@ -22,4 +22,7 @@ STEPS:
 15. use DVC(data version control) for track data like git (for big data)
 16.  DVC Commands
 #### dvc init, dvc add artifacts/raw.csv,
-17. use jupyter for research for training(USE EDA,)
+17. use jupyter for research for training(USE EDA,model_training)
+# now do the notebook code in pipeline format
+18. write code in data_transformation.py(feature_engineering)
+19. 
