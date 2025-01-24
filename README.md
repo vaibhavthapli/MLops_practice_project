@@ -16,7 +16,7 @@ STEPS:
 9. Write code on logger.py
 10. Write code for exception.py
 11. create .env variable (store database connection )
-12. write code in utils.py (for database connection)
+12. write code in utils.py read_sql_data(for database connection)
 13. Start data ingestion(open components/data_ingestion.py)
 14. write code for run data ingestion in app.py
 15. use DVC(data version control) for track data like git (for big data)
@@ -25,4 +25,5 @@ STEPS:
 17. use jupyter for research for training(USE EDA,model_training)
 # now do the notebook code in pipeline format
 18. write code in data_transformation.py(feature_engineering)
-19. 
+19. create save_object def in utils
+20. 

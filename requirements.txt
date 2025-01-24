@@ -10,4 +10,6 @@ matplotlib
 catboost
 lazypredict
 xgboost
+mlflow==2.19.0
+dill
 -e .
