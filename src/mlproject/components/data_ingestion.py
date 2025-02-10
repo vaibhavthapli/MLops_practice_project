@@ -18,7 +18,7 @@ class DataIngestionConfig:
     train_data_path:str=os.path.join("artifacts","train.csv")
     test_data_path:str=os.path.join("artifacts","test.csv")
     raw_data_path: str = os.path.join("artifacts", "raw.csv")
-    validation_data_path:str=os.path.join("artifacts","validation.csv")
+
 
 
 class DataIngestion:
@@ -39,7 +39,7 @@ class DataIngestion:
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
             logging.info(f"Raw data is saved at {self.ingestion_config.raw_data_path}")
             #train test
-
+            logging.info("Train test split initiated")
             train_set,test_set = train_test_split(df,test_size=0.1,random_state=42)
             # Creating validation set from test set (1% of the test set)
             #validation_size = int(len(test_set) * 0.5)
@@ -55,11 +55,9 @@ class DataIngestion:
 
             return(
                 self.ingestion_config.train_data_path,
-                self.ingestion_config.test_data_path,
+                self.ingestion_config.test_data_path
                 #self.ingestion_config.validation_data_path
             )
-
-
         except Exception as e:
             raise CustomException(e,sys)
 
