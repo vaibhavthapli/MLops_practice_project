@@ -27,4 +27,5 @@ STEPS:
 18. write code in data_transformation.py(feature_engineering)
 19. create save_object def in utils
 20. write code for model_trainer.py
-21. 
+21. update utils
+22. 
