@@ -1,30 +1,44 @@
-from src.mlproject.logger import logging
-from src.mlproject.exception import CustomException
-import sys
-from src.mlproject.components.data_ingestion import DataIngestionConfig, DataIngestion
-from src.mlproject.components.data_transformation import DataTransformation, DataTransformationConfig
-from src.mlproject.components.model_trainer import ModelTrainer, ModelTrainerConfig
+from flask import Flask, render_template, request
+import numpy as np
+import pandas as pd
+from templates import *
+from sklearn.preprocessing import StandardScaler
+from src.mlproject.pipelines.prediction_pipeline import CustomData, PredictPipeline
+application = Flask(__name__)
 
-if __name__ == "__main__":
-    logging.info("Test")
-    try:
-        #data_ingestion_config=DataIngestionConfig()
-        data_ingestion = DataIngestion()
-        #data_ingestion.initiate_data_ingestion() #when run only ingestion.py
-        train_data_path, test_data_path = data_ingestion.initiate_data_ingestion() # run for complete model
+app = application
 
-        #data_transformation_config=DataTransformationConfig()
-        data_transformation = DataTransformation()
-        train_arr,test_arr,_=data_transformation.initiate_data_transormation(train_data_path,test_data_path)
+## Route for a home page
 
-        ##model training
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-        model_trainer = ModelTrainer()
-        print(model_trainer.initiate_model_trainer(train_arr,test_arr))
+@app.route('/predictdata',methods=['GET','POST'])
+def predict_datapoint():
+    if request.method=='GET':
+        return render_template('home.html')
+    else:
+        data=CustomData(
+            gender=request.form.get('gender'),
+            race_ethnicity=request.form.get('ethnicity'),
+            parental_level_of_education=request.form.get('parental_level_of_education'),
+            lunch=request.form.get('lunch'),
+            test_preparation_course=request.form.get('test_preparation_course'),
+            reading_score=float(request.form.get('writing_score')),
+            writing_score=float(request.form.get('reading_score'))
+
+        )
+        pred_df=data.get_data_as_data_frame()
+        print(pred_df)
+        print("Before Prediction")
+
+        predict_pipeline=PredictPipeline()
+        print("Mid Prediction")
+        results=predict_pipeline.predict(pred_df)
+        print("after Prediction")
+        return render_template('home.html',results=results[0])
 
 
-
-
-    except Exception as e:
-        logging.info("Custom Exception")
-        raise CustomException(e,sys)
+if __name__=="__main__":
+    app.run(host="0.0.0.0", debug=True)
