@@ -19,7 +19,7 @@ def get_requirements(file_path: str) -> List[str]:
 
 
 setup(name='mlospp',
-      version='0.0.1',
+      version='0.0.2',
       description='mlops practice project',
       author='vaibhav',
       author_email='hellovaibt@gmail.com',
