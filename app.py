@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from src.mlproject.pipelines.prediction_pipeline import CustomData, PredictPipeline
+from src.mlproject.pipelines.training_pipeline import run_training_pipeline
 application = Flask(__name__)
 
 app = application
@@ -12,6 +13,14 @@ app = application
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/train', methods=['POST'])
+def train_model():
+    try:
+        run_training_pipeline()  # Call the training pipeline function
+        return jsonify({"message": "Model training completed successfully!"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
