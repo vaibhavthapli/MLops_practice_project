@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
-from templates import *
 from sklearn.preprocessing import StandardScaler
 from src.mlproject.pipelines.prediction_pipeline import CustomData, PredictPipeline
 application = Flask(__name__)
@@ -25,8 +24,8 @@ def predict_datapoint():
             parental_level_of_education=request.form.get('parental_level_of_education'),
             lunch=request.form.get('lunch'),
             test_preparation_course=request.form.get('test_preparation_course'),
-            reading_score=float(request.form.get('writing_score')),
-            writing_score=float(request.form.get('reading_score'))
+            reading_score=float(request.form.get('reading_score')),
+            writing_score=float(request.form.get('writing_score'))
 
         )
         pred_df=data.get_data_as_data_frame()
