@@ -28,4 +28,13 @@ STEPS:
 19. create save_object def in utils
 20. write code for model_trainer.py
 21. update utils
-22. 
+22.  after complete components ( time to build pipeline)
+23. 1- Prediction_pipeline
+24. create new app.py
+25. create folder templates (index.html, home.html)
+26. write code in both 
+27. write code in training_pipeline.py
+28. write code in app.py(flask)
+29. run app.py(python app.py)
+30. check on crome (127.0.0.1:5000)
+31. call(127.0.0.1:5000/predictdata)
