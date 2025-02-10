@@ -23,7 +23,7 @@ STEPS:
 16.  DVC Commands
 #### dvc init, dvc add artifacts/raw.csv,
 17. use jupyter for research for training(USE EDA,model_training)
-# now do the notebook code in pipeline format
+# now we done the notebook code in pipeline format
 18. write code in data_transformation.py(feature_engineering)
 19. create save_object def in utils
 20. write code for model_trainer.py
