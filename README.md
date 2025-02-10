@@ -38,3 +38,6 @@ STEPS:
 29. run app.py(python app.py)
 30. check on crome (127.0.0.1:5000)
 31. call(127.0.0.1:5000/predictdata)
+
+
+![Screenshot from 2025-02-11 01-12-01](https://github.com/user-attachments/assets/9c1db604-06b4-45a2-a070-ec33961312a2)
