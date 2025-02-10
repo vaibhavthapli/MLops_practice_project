@@ -7,7 +7,7 @@ from src.mlproject.components.model_trainer import ModelTrainer, ModelTrainerCon
 
 
 
-if __name__ == "__main__":
+def run_training_pipeline():
     logging.info("Training pipeline")
     try:
         #data_ingestion_config=DataIngestionConfig()
